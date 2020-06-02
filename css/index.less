@@ -1,0 +1,234 @@
+@import './shop.css';
+@import './phone.css';
+@import './hotel.css';
+@import './gift.css';
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td /* table elements 表格元素 */ {
+    margin: 0;
+    padding: 0;
+}
+/** 设置默认字体 **/
+body,
+
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置文本格式元素 **/
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+sup { vertical-align: text-top; } /* 重置, 减少对行高的影响 */
+sub { vertical-align: text-bottom; }
+/** 重置表单元素 **/
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: 0; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/* 重置 HTML5 元素 */
+article, aside, details, figcaption, figure, footer,header, hgroup, menu, nav, section,
+summary, time, mark, audio, video {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+mark { background: #ff0; }
+/* 设置placeholder的默认样式 */
+:-moz-placeholder {
+    color: #ddd;
+    opacity: 1;
+}
+::-moz-placeholder {
+    color: #ddd;
+    opacity: 1;
+}
+input:-ms-input-placeholder {
+    color: #ddd;
+    opacity: 1;
+}
+input::-webkit-input-placeholder {
+    color: #ddd;
+    opacity: 1;
+}
+
+
+// 布局
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    #comlist{
+        width: 340px;
+        height: 640px;
+        overflow-x: hidden;
+        border: 1px solid #333;
+        // display: flex;
+        // flex-wrap: nowrap;
+        position: relative;
+        border-radius: 5px;
+        .module{
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 10px;
+            >.title{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+                color: #333;
+            }
+        }
+        >.tab{
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            display: flex;
+            
+            >div{
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border: 1px solid #eaeaea;
+                margin: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 14px;
+                color: #333;
+                transition: all 0.2s ease;
+                &:nth-child(1){
+                    background-color: rgba(155, 184, 155, 1);
+                    color: #fff;
+                }
+            }
+        }
+        >.moduleBox{
+            width: 100%;
+            height: 590px;
+            overflow-x: hidden;
+        }
+    }
+    #phone{
+        width: 340px;
+        height: 640px;
+        border: 1px solid #333;
+        border-radius: 15px;
+        overflow-x: hidden;
+        position: relative;
+    }
+    #msg{
+        width: 340px;
+        height: 640px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        >.msgBox{
+            width: 100%;
+            height: 590px;
+            overflow-x: hidden;
+        }
+        >#sub{
+            width: 100%;
+            height: 50px;
+            background-color: rgba(155, 184, 155, 1);
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+}
+#dialog{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    >.zzc{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    >.dialogContent{
+        width: 350px;
+        height: 200px;
+        background-color: #fff;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        >.tabList{
+            width: 100%;
+            height: 350px;
+            overflow-x: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            >.tab{
+                width: 50px;
+                height: 70px;
+                // float: left;
+                margin-left: 14px;
+                margin-top: 5px;
+                text-align: center;
+                font-size: 14px;
+                color: #333;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 5px;
+                >.cover{
+                    width:50px;
+                    height: 50px;
+                    border-radius: 50%;
+                        >img{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                    }
+                }
+            }
+            >.chose{
+                background-color: #9bb89b;
+                color: #fff;
+            }
+        }
+        >.content{
+            width: 80%;
+            height: 150px;
+            margin: 0 auto;
+            line-height: 150px;
+            text-align: center;
+            font-size: 16px;
+        }
+        >.button{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            border-top: 1px solid #eaeaea;
+            >div{
+                width: 50%;
+                height: 100%;
+                line-height: 50px;
+                text-align: center;
+                font-size: 14px;
+                &:nth-child(1){
+                    border-right: 1px solid #eaeaea;
+                }
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.MainLine{
+    width: 100%;
+    height: 5px;
+    background-color: #eaeaea;
+}

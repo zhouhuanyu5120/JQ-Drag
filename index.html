@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link href="./css/iconfont.css" rel="stylesheet">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/public/public.js"></script>
+    <script src="./js/public/ajax.js"></script>
+    <script src="./js/component/shop.js"></script>
+    <script src="./js/component/hotel.js"></script>
+    <script src="./js/component/gift.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 模块 -->
+        <div id="comlist">
+            <div class="tab">
+                <div type='mall'>商城</div>
+                <div type='hotel'>酒店</div>
+                <div type='gift'>礼包</div>
+                <div type='my'>我的</div>
+            </div>
+            <div class="moduleBox">
+
+            </div>
+        </div>
+        <!-- phone -->
+        <div class="phone" id="phone">
+            <!-- <div class='ShopMainBg modular' type='MainBg'></div> -->
+            <!-- <div class='ShopMainTab modular' type='MainTab'>
+                <ul>
+                    <li>精选推荐</li>
+                    <li>线上体验店</li>
+                    <li>爆款拼团</li>
+                    <li>美妆个护</li>
+                    <li>食品零食</li>
+                </ul>
+            </div>  -->
+        </div>
+        <!-- 模块设置 -->
+        <div id="msg">
+            <div class="msgBox"></div>
+            <div id="sub">保存设置</div>
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        // 默认初始化商城组件
+        ComShop.initialization()
+
+        function initialization(param) {
+            // 如果默认phone有组件需要初始化才能进行设置
+            MainFun.initialization($('#phone'))
+
+            // 设置phone元素   
+            $("#phone").sortable({
+                revert: true
+            });
+            // 设置哪些模块可以拖拽  
+            $(".sortable").draggable({
+                connectToSortable: "#phone",
+                helper: "clone",
+                revert: "invalid"
+            });
+            //  这里做模块拖进phone时的处理
+            $("#phone").droppable({
+                drop: function (event, ui) {
+                    // $(this).find('.modular').css({ width: '100%' })
+                    // $(this).find('.shopMainAdvert').css({ height: 'auto' })
+
+                    // 来自index.js的class 进行组件初始化
+                    MainFun.initialization(this)
+                }
+            });
+        }
+        //  初始化
+        initialization()
+
+        // tab点击事件
+        $('.tab>div').click(function () {
+            var type = $(this).attr('type')
+            $('.tab>div').css({ 'color': '#333', 'background': '#fff' })
+            $(this).css({ 'color': '#fff', 'background': 'rgba(155, 184, 155, 1)' })
+            switch (type) {
+                case 'mall':
+                    ComShop.initialization()
+                    //  初始化
+                    initialization()
+                    break;
+                case 'hotel':
+                    HotelCom.initialization()
+                    //  初始化
+                    initialization()
+                    // alert(type)
+                    break;
+                case 'gift':
+                    GiftCom.initialization()
+                    //  初始化
+                    initialization()
+                    // alert(type)
+                    break;
+                case 'my':
+                    // alert(type)
+                    break;
+                default:
+                    break;
+            }
+        })
+    });
+</script>
+
+</html>

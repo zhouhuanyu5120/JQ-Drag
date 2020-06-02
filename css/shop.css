@@ -1,0 +1,402 @@
+.shopBannerBox {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+.shopBannerBox .shopBanner {
+  width: 90%;
+  height: 100px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.shopBannerBox .shopBanner > div {
+  width: 100%;
+  height: 100%;
+}
+.shopBannerBox .shopBanner > div > img {
+  width: 100%;
+  height: 100%;
+}
+.shopMainTab {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  font-size: 13px;
+}
+.shopMainTab > ul {
+  width: 1000px;
+  height: 40px;
+  display: flex;
+}
+.shopMainTab > ul > li {
+  margin-left: 10px;
+}
+.shopMainHeader {
+  width: 100%;
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.shopMainHeader > .bg {
+  width: 140%;
+  height: 150px;
+  position: absolute;
+  left: -20%;
+  top: 0;
+  z-index: -10;
+  border-radius: 0 0 50% 50%;
+  background-color: #5d81a3;
+}
+.shopMainHeader > .head {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.shopMainHeader > .head > .user {
+  width: 90px;
+  height: 100%;
+  display: flex;
+  padding-left: 10px;
+}
+.shopMainHeader > .head > .user > .userCover {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.shopMainHeader > .head > .user > .userCover > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.shopMainHeader > .head > .user > .userMsg {
+  width: 45px;
+  height: 100%;
+  font-size: 12px;
+  line-height: 15px;
+  margin-left: 5px;
+  color: #fff;
+}
+.shopMainHeader > .head > .search {
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+.shopMainHeader > .head > .search > .searchIcon {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #9bb89b;
+}
+.shopMainHeader > .head > .search input {
+  width: 170px;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+.shopMainHeader > .head > .cart {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+}
+.shopTabBanner {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.shopTabBanner > .page {
+  width: 100%;
+  height: 100%;
+}
+.shopTabBanner > .page > .tab {
+  width: 50px;
+  height: 80px;
+  float: left;
+  margin-left: 14px;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+.shopTabBanner > .page > .tab > .cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.shopTabBanner > .page > .tab > .cover > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.shopMainAdvert {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.shopMainAdvert > .advert {
+  width: 95%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0px 5px 10px rgba(167, 163, 163, 0.9);
+}
+.shopMainAdvert > .advert > div {
+  width: 49%;
+  height: 117px;
+  border: 1px solid #eaeaea;
+}
+.shopMainAdvert > .advert > div > img {
+  width: 100%;
+}
+.shopMainCommodity {
+  width: 100%;
+}
+.shopMainCommodity > .commodity {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.shopMainCommodity > .commodity > div {
+  width: 48%;
+  height: 244px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0px 5px 10px rgba(167, 163, 163, 0.9);
+}
+.shopMainCommodity > .commodity > div > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#msg .bannerList {
+  width: 95%;
+  height: 140px;
+  margin: 5px auto;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+#msg .bannerList > .bannerImg {
+  width: 100%;
+  height: 100px;
+}
+#msg .bannerList > .bannerImg > img {
+  width: 100%;
+  height: 100%;
+}
+#msg .bannerList > .imgUpload {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  cursor: pointer;
+}
+#msg .bannerList > .imgUpload input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#msg .imgAdd {
+  width: 95%;
+  height: 100px;
+  margin: 5px auto;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  line-height: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+#msg .inputBox {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 14px;
+  margin-top: 10px;
+}
+#msg .inputBox input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  outline: none;
+}
+#msg .tabList {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+}
+#msg .tabList > .list {
+  width: 100%;
+}
+#msg .tabList > .list > ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#msg .tabList > .list > ul > li {
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 3px 10px 3px 10px;
+  margin: 5px 5px 5px 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+#msg .tabList > .list > ul > .chose {
+  background-color: #9bb89b;
+  color: #fff;
+}
+#msg .tabBanner {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+}
+#msg .tabBanner > .page {
+  width: 100%;
+  height: 160px;
+}
+#msg .tabBanner > .page > .tab {
+  width: 50px;
+  height: 80px;
+  float: left;
+  margin-left: 14px;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+#msg .tabBanner > .page > .tab > .cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+#msg .tabBanner > .page > .tab > .cover > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#msg .tabBanner > .button {
+  clear: both;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  border-top: 1px solid #eaeaea;
+  cursor: pointer;
+  display: flex;
+}
+#msg .tabBanner > .button > div {
+  width: 50%;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+#msg .tabBanner > .button > div:nth-child(2) {
+  color: #fff;
+  background-color: #F56C6C;
+}
+#msg .addPage {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#msg .AdvertList {
+  width: 90%;
+  margin: 0 auto;
+}
+#msg .AdvertList > .title {
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  color: #333;
+}
+#msg .AdvertList > .Advertbox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+#msg .AdvertList > .Advertbox > .list {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+}
+#msg .AdvertList > .Advertbox > .list > .cir {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-right: 3px;
+}
+#msg .AdvertList > .Advertbox > .list > .chose {
+  background-color: #F56C6C;
+}
+#msg .CommodityList {
+  width: 90%;
+  margin: 0 auto;
+}
+#msg .CommodityList > .title {
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  color: #333;
+}
+#msg .CommodityList > .Commoditytbox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+#msg .CommodityList > .Commoditytbox > .list {
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#msg .CommodityList > .Commoditytbox > .list > .cir {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-right: 3px;
+}
+#msg .CommodityList > .Commoditytbox > .list > .chose {
+  background-color: #F56C6C;
+}

@@ -1,0 +1,446 @@
+// banner
+.shopBannerBox{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    .shopBanner{
+        width: 90%;
+        height: 100px;
+        // background-color: #000;
+        text-align: center;
+        overflow: hidden;
+        margin: 0 auto;
+        border-radius: 10px;
+        >div{
+            width: 100%;
+            height: 100%;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+// 选项卡
+.shopMainTab{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    // color: #fff;
+    font-size: 13px;
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+    >ul{
+        width: 1000px;
+        height: 40px;
+        display: flex;
+        >li{
+            margin-left:10px;
+        }
+    }
+}
+
+// 顶部背景色
+// .ShopMainBg{
+//     background-color: rgba(93, 129, 163, 1);
+//     width: 200%;
+//     position: relative;
+//     height: 200px;
+//     border-bottom-left-radius: 50px;
+//     border-bottom-right-radius: 50px;
+// }
+
+// 头部组件
+.shopMainHeader{
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    // overflow: hidden;
+    >.bg{
+        width: 140%;
+        height: 150px;
+        position: absolute;
+        left: -20%;
+        top: 0;
+        z-index: -10;
+        border-radius: 0 0 50% 50%;
+        background-color: rgba(93, 129, 163, 1);
+    }
+    >.head{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        >.user{
+            width: 90px;
+            height: 100%;
+            display: flex;
+            padding-left: 10px;
+            >.userCover{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+            >.userMsg{
+                width: 45px;
+                height: 100%;
+                font-size: 12px;
+                line-height: 15px;
+                margin-left: 5px;
+                color: #fff;
+            }
+        }
+        >.search{
+            width: 200px;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            >.searchIcon{
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                color: #9bb89b;
+            }
+            input{
+                width: 170px;
+                height: 100%;
+                border: none;
+                outline: none;
+            }
+        }
+        >.cart{
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+    }
+}
+
+// 精钢位
+.shopTabBanner{
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    >.page{
+        width: 100%;
+        height: 100%;
+        >.tab{
+            width: 50px;
+            height: 80px;
+            float: left;
+            margin-left: 14px;
+            margin-top: 5px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            >.cover{
+               width:50px;
+               height: 50px;
+               border-radius: 50%;
+               >img{
+                   width: 100%;
+                   height: 100%;
+                   border-radius: 50%;
+               }
+            }
+        }
+    }
+}
+
+// 胶囊广告
+.shopMainAdvert{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    >.advert{
+        width: 95%;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: #fff;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow:0px 5px 10px rgba(167, 163, 163, 0.9);
+        >div{
+            width: 49%;
+            height: 117px;
+            border:1px solid #eaeaea;
+            >img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+// 推荐商品
+.shopMainCommodity{
+    width: 100%;
+    >.commodity{
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        >div{
+            width: 48%;
+            height: 244px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            box-shadow:0px 5px 10px rgba(167, 163, 163, 0.9);
+            >img{
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+#msg{
+    // banner列表
+    .bannerList{
+        width: 95%;
+        height: 140px;
+        margin: 5px auto;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        >.bannerImg{
+            width: 100%;
+            height: 100px;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        >.imgUpload{
+            width: 100%;
+            height: 40px;
+            position: relative;
+            text-align: center;
+            font-size: 14px;
+            line-height: 40px;
+            cursor: pointer;
+            input{
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+    }
+    // 增加banner按钮
+    .imgAdd{
+        width: 95%;
+        height: 100px;
+        margin: 5px auto;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        line-height: 100px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    // 通用输入框
+    .inputBox{
+        width: 95%;
+        margin: 0 auto;
+        font-size: 14px;
+        margin-top: 10px;
+        input{
+            width: 100%;
+            height: 40px;
+            border: none;
+            border-bottom: 1px solid #eaeaea;
+            outline: none;
+        }
+    }
+
+    // 选项卡列表
+    .tabList{
+        width: 95%;
+        margin: 0 auto;
+        font-size: 14px;
+        margin-top: 10px;
+        color: #333;
+        >.list{
+            width: 100%;
+            >ul{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                >li{
+                    border: 1px solid #eaeaea;
+                    border-radius: 5px;
+                    padding: 3px 10px 3px 10px;
+                    margin: 5px 5px 5px 0;
+                    font-size: 12px;
+                    cursor: pointer;
+                }
+                >.chose{
+                    background-color: #9bb89b;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    // 精钢位
+    .tabBanner{
+        width: 100%;
+        // height: 200px;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        >.page{
+            width: 100%;
+            height: 160px;
+            >.tab{
+                width: 50px;
+                height: 80px;
+                float: left;
+                margin-left: 14px;
+                margin-top: 5px;
+                text-align: center;
+                font-size: 14px;
+                color: #333;
+                    >.cover{
+                    width:50px;
+                    height: 50px;
+                    border-radius: 50%;
+                        >img{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                    }
+                }
+            }
+        }
+        >.button{
+            clear: both;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: #333;
+            font-size: 14px;
+            border-top: 1px solid #eaeaea;
+            cursor: pointer;
+            display: flex;
+            >div{
+                width: 50%;
+                height: 100%;
+                line-height: 40px;
+                text-align: center;
+                &:nth-child(2){
+                    // border-left: 1px solid #eaeaea;
+                    color: #fff;
+                    background-color: #F56C6C;
+                }
+            }
+        }
+    }
+    .addPage{
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+    // 胶囊广告
+    .AdvertList{
+        width: 90%;
+        margin: 0 auto;
+        >.title{
+            width: 100%;
+            line-height: 40px;
+            height: 40px;
+            color: #333;
+        }
+        >.Advertbox{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+            >.list{
+                width: 50px;
+                height: 30px;
+                display: flex;
+                cursor: pointer;
+                >.cir{
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid #eaeaea;
+                    border-radius: 50%;
+                    margin-top: 2px;
+                    margin-right: 3px;
+                }
+                >.chose{
+                    background-color: #F56C6C;
+                }
+            }
+        }
+    }
+
+    // 胶囊广告
+    .CommodityList{
+        width: 90%;
+        margin: 0 auto;
+        >.title{
+            width: 100%;
+            line-height: 40px;
+            height: 40px;
+            color: #333;
+        }
+        >.Commoditytbox{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 14px;
+            >.list{
+                // width: 50px;
+                height: 30px;
+                display: flex;
+                cursor: pointer;
+                margin-right: 10px;
+                >.cir{
+                    width: 14px;
+                    height: 14px;
+                    border: 1px solid #eaeaea;
+                    border-radius: 50%;
+                    margin-top: 2px;
+                    margin-right: 3px;
+                }
+                >.chose{
+                    background-color: #F56C6C;
+                }
+            }
+        }
+    }
+}
