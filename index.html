@@ -18,31 +18,57 @@
 </head>
 
 <body>
+    <div class="headerCtrl">
+        <div class="sub">上架</div>
+        <div class="save">保存编辑</div>
+    </div>
     <div class="box">
+        <div>
+            <div id="comlist">
+                <div class="moduleType">
+                    <div class="list chose">
+                        <div><i class="iconfont icon-huiyuan"></i></div>
+                        <div>会员信息</div>
+                    </div> 
+                    <div class="list">
+                        <div><i class="iconfont icon-huiyuan"></i></div>
+                        <div>会员信息</div>
+                    </div> 
+                    <div class="list">
+                        <div><i class="iconfont icon-huiyuan"></i></div>
+                        <div>会员信息</div>
+                    </div> 
+                    <div class="list">
+                        <div><i class="iconfont icon-huiyuan"></i></div>
+                        <div>会员信息</div>
+                    </div> 
+                </div>
+                <div class="moduleBox">
+    
+                </div>
+            </div>
+        </div>
         <!-- 模块 -->
-        <div id="comlist">
+        <!-- phone -->
+        <div id="phoneBox">
             <div class="tab">
                 <div type='mall'>商城</div>
                 <div type='hotel'>酒店</div>
                 <div type='gift'>礼包</div>
                 <div type='my'>我的</div>
             </div>
-            <div class="moduleBox">
-
+            <div class="phone" id="phone">
+                <!-- <div class='ShopMainBg modular' type='MainBg'></div> -->
+                <!-- <div class='ShopMainTab modular' type='MainTab'>
+                    <ul>
+                        <li>精选推荐</li>
+                        <li>线上体验店</li>
+                        <li>爆款拼团</li>
+                        <li>美妆个护</li>
+                        <li>食品零食</li>
+                    </ul>
+                </div>  -->
             </div>
-        </div>
-        <!-- phone -->
-        <div class="phone" id="phone">
-            <!-- <div class='ShopMainBg modular' type='MainBg'></div> -->
-            <!-- <div class='ShopMainTab modular' type='MainTab'>
-                <ul>
-                    <li>精选推荐</li>
-                    <li>线上体验店</li>
-                    <li>爆款拼团</li>
-                    <li>美妆个护</li>
-                    <li>食品零食</li>
-                </ul>
-            </div>  -->
         </div>
         <!-- 模块设置 -->
         <div id="msg">
@@ -73,8 +99,8 @@
             //  这里做模块拖进phone时的处理
             $("#phone").droppable({
                 drop: function (event, ui) {
-                    // $(this).find('.modular').css({ width: '100%' })
-                    // $(this).find('.shopMainAdvert').css({ height: 'auto' })
+                    // $(this).find('.modular').css({ height: 'auto' })
+                    $(this).find('.shopMainAdvert').css({ height: 'auto' })
 
                     // 来自index.js的class 进行组件初始化
                     MainFun.initialization(this)
@@ -87,8 +113,8 @@
         // tab点击事件
         $('.tab>div').click(function () {
             var type = $(this).attr('type')
-            $('.tab>div').css({ 'color': '#333', 'background': '#fff' })
-            $(this).css({ 'color': '#fff', 'background': 'rgba(155, 184, 155, 1)' })
+            $('.tab>div').css({'border-bottom': '2px solid #fff' })
+            $(this).css({ 'border-bottom': '2px solid #2D72E5' })
             switch (type) {
                 case 'mall':
                     ComShop.initialization()

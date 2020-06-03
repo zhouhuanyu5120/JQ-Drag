@@ -48,7 +48,7 @@ class Shop {
         var dom = `
             <div class="module" style='height:100px;overflow:hidden;'>
                 <div class='title'>头部组件</div>
-                <div class='shopMainHeader modular sortable' type='MainHeader' title='这里是标题' bgColor=''>
+                <div class='shopMainHeader modular sortable' type='MainHeader' title='这里是标题' brief='' bgColor=''>
                     <div class='bg'></div>
                     <div class='head'>
                         <div class='user'>
@@ -89,21 +89,39 @@ class Shop {
 
         var domColor = $('#phone').find('.modular').eq(this.index).attr('bgColor')
         var domTitle = $('#phone').find('.modular').eq(this.index).attr('title')
+        var domBrief = $('#phone').find('.modular').eq(this.index).attr('brief')
 
         // 设置页面标题
-        var colorDom = `
+        var domHeader = `
+            <div class='domHeader'>
+                页面设置
+            </div>
+        `
+        $('#msg>.msgBox').append(domHeader)  
+
+        // 设置页面标题
+        var titelDom = `
             <div class='inputBox headTitle'>
                 <div>页面标题：</div>
                 <input type='text' value='${domTitle}' placeholder="输入页面标题"/>
             </div>
         `
-        $('#msg>.msgBox').append(colorDom)  
+        $('#msg>.msgBox').append(titelDom)  
+
+         // 设置页面描述
+         var briefDom = `
+            <div class='inputBox headBrief'>
+                <div>页面描述：</div>
+                <input type='text' value='${domBrief}' placeholder="用户通过微信分享给朋友时，会员自动显示页面描述"/>
+            </div>
+        `
+        $('#msg>.msgBox').append(briefDom)  
 
         // 设置页面背景色
         var colorDom = `
             <div class='inputBox headColor'>
                 <div>背景颜色：</div>
-                <input type='text' value='${domColor}' placeholder="输入背景颜色，例如#ffffff"/>
+                <input type='text' value='${domColor}' placeholder="输入背景颜色，例如#ffffff，不修改择为默认色"/>
             </div>
         `
         $('#msg>.msgBox').append(colorDom)  
@@ -112,9 +130,11 @@ class Shop {
         // 设定右侧栏点击保存后的逻辑
         $('#msg').on('click', '.headSub', function () {
             var title = $('.headTitle').find('input').val()
+            var brief = $('.headBrief').find('input').val()
             var color = $('.headColor').find('input').val()
 
             $('#phone').find('.modular').eq(_this.index).attr('title', title)
+            $('#phone').find('.modular').eq(_this.index).attr('brief', brief)
             $('#phone').find('.modular').eq(_this.index).attr('bgColor', color)
             $('#phone').find('.modular').eq(_this.index).find('.bg').css('background-color',color)
         })
@@ -250,7 +270,7 @@ class Shop {
         var dom = `
             <div class="module">
                 <div class='title'>轮播图</div>
-                <div class='shopBannerBox modular sortable' type='Banner'>
+                <div class='shopBannerBox modular sortable' type='Banner' pageNum='1'>
                     <div class='shopBanner'>
                         <div><img src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=256660427,1966353460&fm=26&gp=0.jpg'/></div>
                     </div>
@@ -756,7 +776,7 @@ class Shop {
     mainAdvert() {
         var dom = `
             <div class="module">
-                <div class='title'>胶囊广告</div>
+                <div class='title'><span style='color:red;'>*</span>胶囊广告</div>
                 <div class='shopMainAdvert modular sortable' type='MainAdvert'>
                     <div class='advert'>
                         <div><img src='https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-04-19/19/yuelvhuipvVCqFoP7Q1587297233.png' /></div>
@@ -789,7 +809,7 @@ class Shop {
 
         var msgDom = `
             <div class='AdvertList'>
-                <div class='title'>胶囊广告位设置:</div>
+                <div class='title'><span style='red'>*</span>胶囊广告位设置:</div>
                 <div class='Advertbox'>
                     <div class='list' num='2'>
                         <div class='cir ${num==2?'chose':''}'></div> <div>2张</div>

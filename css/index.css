@@ -107,24 +107,59 @@ input::-webkit-input-placeholder {
   color: #ddd;
   opacity: 1;
 }
+html {
+  font-size: 13.333vw;
+}
+body {
+  background-color: #F8F8F8;
+}
+img {
+  vertical-align: top;
+}
+.headerCtrl {
+  width: 100%;
+  height: 0.39rem;
+  position: relative;
+  background-color: #fff;
+}
+.headerCtrl > div {
+  width: 0.59rem;
+  height: 0.23rem;
+  border: 0.01rem solid #dfdfdf;
+  border-radius: 0.02rem;
+  line-height: 0.23rem;
+  text-align: center;
+  font-size: 0.09rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+  float: right;
+  margin-top: 0.07rem;
+  cursor: pointer;
+}
+.headerCtrl .sub {
+  background: #2d72e5;
+  color: #fff;
+  margin-right: 0.47rem;
+  margin-left: 0.09rem;
+}
 .box {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .box #comlist {
-  width: 340px;
-  height: 640px;
+  height: 100%;
   overflow-x: hidden;
-  border: 1px solid #333;
+  display: flex;
   position: relative;
-  border-radius: 5px;
 }
 .box #comlist .module {
   padding-left: 10px;
   padding-right: 10px;
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 10px;
+  overflow: hidden;
 }
 .box #comlist .module > .title {
   width: 100%;
@@ -133,61 +168,96 @@ input::-webkit-input-placeholder {
   font-size: 16px;
   color: #333;
 }
-.box #comlist > .tab {
+.box #comlist > .moduleType {
+  width: 0.41rem;
+  height: 3.2rem;
+  overflow-x: hidden;
+  background-color: #fff;
+  margin-top: 0.01rem;
+}
+.box #comlist > .moduleType > .list {
   width: 100%;
-  height: 50px;
-  overflow: hidden;
-  display: flex;
-}
-.box #comlist > .tab > div {
-  width: 100px;
-  height: 30px;
-  line-height: 30px;
   text-align: center;
-  border: 1px solid #eaeaea;
-  margin: 10px;
+  font-size: 0.05rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
-  color: #333;
-  transition: all 0.2s ease;
+  margin-top: 0.12rem;
 }
-.box #comlist > .tab > div:nth-child(1) {
-  background-color: #9bb89b;
-  color: #fff;
+.box #comlist > .moduleType > .list > div:nth-child(1) {
+  font-size: 0.1rem;
+}
+.box #comlist > .moduleType .chose {
+  color: #2d72e5;
 }
 .box #comlist > .moduleBox {
-  width: 100%;
-  height: 590px;
+  width: 340px;
+  height: 3.2rem;
   overflow-x: hidden;
+  background-color: #fff;
+  position: relative;
+  margin-top: 0.01rem;
+  margin-left: 0.01rem;
+  margin-right: 0.01rem;
+  transform-origin: 0% 0%;
 }
-.box #phone {
+.box > #phoneBox > .tab {
+  width: 4rem;
+  height: 0.35rem;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  background-color: #fff;
+  justify-content: space-around;
+  margin-top: 0.01rem;
+}
+.box > #phoneBox > .tab > div {
+  width: 0.23rem;
+  line-height: 0.35rem;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+  font-size: 0.09rem;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+  transition: all 0.2s ease;
+}
+.box > #phoneBox > .tab > div:nth-child(1) {
+  border-bottom: 2px solid #2D72E5;
+}
+.box > #phoneBox #phone {
   width: 340px;
   height: 640px;
-  border: 1px solid #333;
-  border-radius: 15px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 0.01rem;
   overflow-x: hidden;
   position: relative;
 }
 .box #msg {
-  width: 340px;
+  width: 1.56rem;
   height: 640px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  background-color: #fff;
+  margin-top: 0.01rem;
+  margin-left: 0.01rem;
 }
 .box #msg > .msgBox {
   width: 100%;
   height: 590px;
   overflow-x: hidden;
+  font-size: 0.09rem;
 }
 .box #msg > #sub {
   width: 100%;
   height: 50px;
-  background-color: #9bb89b;
+  background: #2d72e5;
   line-height: 50px;
   text-align: center;
   color: #fff;
   cursor: pointer;
+  font-size: 0.09rem;
 }
 #dialog {
   width: 100%;
